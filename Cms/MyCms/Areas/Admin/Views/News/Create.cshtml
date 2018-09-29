@@ -1,0 +1,87 @@
+﻿@model MyCms.Models.News
+
+@{
+	ViewBag.Title = "Create";
+}
+
+
+@using (Html.BeginForm("Create","News",FormMethod.Post,new {enctype="multipart/form-data"}))
+{
+	@Html.AntiForgeryToken()
+
+	<div class="form-horizontal">
+		<h4>News</h4>
+		<hr />
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+		<div class="form-group">
+			@Html.LabelFor(model => model.GroupId, "عنوان گروه خبری", htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				@Html.DropDownList("GroupId", null, htmlAttributes: new { @class = "form-control" })
+				@Html.ValidationMessageFor(model => model.GroupId, "", new { @class = "text-danger" })
+			</div>
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(model => model.NewsTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				@Html.EditorFor(model => model.NewsTitle, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.NewsTitle, "", new { @class = "text-danger" })
+			</div>
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(model => model.NewsText, htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				@Html.EditorFor(model => model.NewsText, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.NewsText, "", new { @class = "text-danger" })
+			</div>
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(model => model.ImageName, htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				<input type="file" id="FileUploadImage" name="FileUploadImage" />
+			</div>
+		</div>
+
+		@*<div class="form-group">
+				@Html.LabelFor(model => model.NewsSeen, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-10">
+					@Html.EditorFor(model => model.NewsSeen, new { htmlAttributes = new { @class = "form-control" } })
+					@Html.ValidationMessageFor(model => model.NewsSeen, "", new { @class = "text-danger" })
+				</div>
+			</div>
+
+			<div class="form-group">
+				@Html.LabelFor(model => model.CreateDate, htmlAttributes: new { @class = "control-label col-md-2" })
+				<div class="col-md-10">
+					@Html.EditorFor(model => model.CreateDate, new { htmlAttributes = new { @class = "form-control" } })
+					@Html.ValidationMessageFor(model => model.CreateDate, "", new { @class = "text-danger" })
+				</div>
+			</div>*@
+
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-10">
+				<input type="submit" value="Create" class="btn btn-default" />
+			</div>
+		</div>
+	</div>
+}
+
+<div>
+	@Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+	<script src="~/ckeditor/ckeditor.js"></script>
+	<script src="~/ckeditor/adapters/jquery.js"></script>
+
+	<script>
+		$(function () {
+			$('#NewsText').ckeditor();
+
+		});
+
+	</script>
+	@Scripts.Render("~/bundles/jqueryval")
+}

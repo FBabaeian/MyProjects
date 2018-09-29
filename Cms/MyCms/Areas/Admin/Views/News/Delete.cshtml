@@ -1,0 +1,62 @@
+﻿@model MyCms.Models.News
+
+
+
+
+
+<h3>     آیا مایل به حذف @Model.NewsTitle  هستید؟ </h3>
+<div>
+  
+    <hr />
+    <dl class="dl-horizontal">
+        @*<dt>
+            @Html.DisplayNameFor(model => model.PageGroups.GroupTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageGroups.GroupTitle)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewsTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewsTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </dt>
+
+        <dd>
+           <img src="~/NewsImages/@Model.ImageName" width="200" class="thumbnail">
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewsSeen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewsSeen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("بازگشت به صفحه اصلی", "Index")
+        </div>
+    }
+</div>

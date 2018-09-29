@@ -1,0 +1,92 @@
+﻿@model IEnumerable<MyCms.Models.PageGroup>
+
+@{
+	ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+	<a href="#" onclick="Create()">افزودن گروه خبری جدید </a>
+</p>
+<table class="table">
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.GroupTitle)
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.GroupTitle)
+			</td>
+			<td>
+				<a href="#" onclick="Edit(@item.GroupId)">ویرایش گروه خبری  </a> |
+				@Html.ActionLink("Details", "Details", new { id = item.GroupId }) |
+				@Html.ActionLink("Delete", "Delete", new { id = item.GroupId })
+			</td>
+		</tr>
+	}
+
+</table>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			</div>
+			<div class="modal-body" id="bodymodal">
+				...
+			</div>
+			@*<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>*@
+		</div>
+	</div>
+</div>
+
+@section scripts
+{
+	<script>
+
+		function Create() {
+			$.ajax({
+
+				url: "/Admin/PageGroups/Create",
+				type: "Get",
+				data: {},
+
+
+			}).done(function (result) {
+
+				$('#myModal').modal('show');
+				$('#myModalLabel').html('افزودن گروه جدید');
+				$('#bodymodal').html(result);
+			});
+		}
+
+
+
+		function Edit(id) {
+			$.ajax({
+
+				url: "/Admin/PageGroups/Edit/"+id,
+				type: "Get",
+				data: {},
+
+
+			}).done(function (result) {
+
+				$('#myModal').modal('show');
+				$('#myModalLabel').html('ویرایش گروه خبری');
+				$('#bodymodal').html(result);
+			});
+		}
+	</script>
+}

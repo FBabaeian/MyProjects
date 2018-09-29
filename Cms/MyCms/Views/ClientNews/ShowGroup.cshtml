@@ -1,0 +1,21 @@
+﻿@model IEnumerable<MyCms.Models.PageGroup>
+
+
+
+	@{
+
+		var db = new MyCms.Models.MyCmsContext();
+	}
+	<div class="list-group">
+		<a href="#" class="list-group-item active">
+			گروه خبرها
+		</a>
+		@foreach (var item in Model)
+		{
+			<a href="/ClientNews/ShowNewsByGroup/@item.GroupId" class="list-group-item active">
+				<label class="label label-danger pull-left">@db.News.Count(p => p.GroupId == item.GroupId)</label>@item.GroupTitle
+
+			</a>
+		}
+
+	</div>

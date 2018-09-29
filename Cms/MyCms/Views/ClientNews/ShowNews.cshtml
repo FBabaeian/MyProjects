@@ -1,0 +1,26 @@
+﻿@model MyCms.Models.News
+
+@{
+    ViewBag.Title = "ShowNews";
+}
+<div class="thumbnail">
+
+	<div class="well well-sm text-center">
+		@Model.NewsTitle
+		</div>
+
+	<img src="~/NewsImages/@Model.ImageName" width="200" class="thumbnail pull-left" >
+	@Html.Raw(Model.NewsText) 
+
+	<div class=" alert alert-warning" style="clear:both; padding:5px; margin:5px; ">
+		<p class="text-muted">
+
+			 تاریخ درج خبر: @Model.CreateDate.ToString("dddd, dd MMMM yyyy")  ساعت درج: @Model.CreateDate.ToString("hh:mm")  بازدید: @Model.NewsSeen بار
+		</p>
+
+
+	</div>
+
+
+
+</div>

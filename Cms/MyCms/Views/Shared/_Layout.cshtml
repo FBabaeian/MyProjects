@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title سیستم مدیریت محتوا</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top" style="background-color:powderblue">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<img src="~/NewsImages/CMS-4.jpg" alt="لوگو" />
+				</a>
+				@*@Html.ActionLink(  new { area = "" }, new { @class = "navbar-brand" })*@
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li>@Html.ActionLink("Home", "Index", "Home")</li>
+					<li>@Html.ActionLink("About", "About", "Home")</li>
+					<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+				</ul>
+				@Html.Partial("_LoginPartial")
+			</div>
+		</div>
+	</div>
+
+	<div class="container body-content">
+		<p></p>
+		<div class="col-md-3">
+			@Html.Action("ShowGroup", "ClientNews")
+
+		</div>
+		<div class="col-md-9">
+			@RenderBody()
+		</div>
+	</div>
+	<hr />
+
+	<div>
+		<footer class="page-footer " style="background-color:powderblue;  position:fixed; width:100%; left:0; bottom:0; text-align: center; ">
+
+			<!-- Copyright -->
+			<div class="footer-copyright text-center py-3">
+
+				<p style="font-family:MV Boli"><font size="12" color="a152d9"> NewsCMS</font></p>
+
+			</div>
+			<!-- Copyright -->
+
+		</footer>	
+
+		
+	</div>
+
+
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@RenderSection("scripts", required: false)
+
+
+</body>
+</html>
