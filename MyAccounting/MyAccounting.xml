@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<iasettings>
+  <projectproperties>
+    <manufacturer>F.Babaeian</manufacturer>
+    <productname>MyAccounting</productname>
+    <productversion>1.0.0.0</productversion>
+    <productcode>{73410d6f-c365-495a-ba89-ada510bf47cc}</productcode>
+    <upgradecode>{ae269e01-f9b7-4c90-8f1e-cbb8c5491e23}</upgradecode>
+    <language>0</language>
+    <languagename>English</languagename>
+  </projectproperties>
+  <summary>
+    <title>MyAccounting</title>
+    <subject>MyAccounting</subject>
+    <author>F.Babaeian</author>
+    <summarycomments>MyAccounting</summarycomments>
+    <revisioncode>{b5796935-79b9-4653-80f3-0479bbb7b44e}</revisioncode>
+    <uacelevation>highestAvailable</uacelevation>
+  </summary>
+  <addremove>
+    <publishername>F.Babaeian</publishername>
+    <contactname>F.Babaeian</contactname>
+    <helplink>http://www.mywebsite.com</helplink>
+    <productupdatelink>http://www.mywebsite.com</productupdatelink>
+    <addremovecomments>All Rights Reserved</addremovecomments>
+    <iconfile />
+  </addremove>
+  <codegen>
+    <generateincludefiles>1</generateincludefiles>
+    <generatefeatures>0</generatefeatures>
+    <refreshscript>0</refreshscript>
+  </codegen>
+  <compilervariables>
+    <variables />
+  </compilervariables>
+  <build>
+    <buildtype>0</buildtype>
+    <buildasmsi>False</buildasmsi>
+    <cachesources>1</cachesources>
+  </build>
+  <targetfolders />
+  <files>
+    <filedetails filename="C:\Users\F.Babaeian\source\repos\MyAccounting\Accounting.App\bin\Debug\Accounting.App.exe" targetlocation="$TARGETDIR$" type="1" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="1" runprogram="1" installfilecommand="0" />
+    <filedetails filename="C:\Users\F.Babaeian\source\repos\Accounting\Accounting.Business\bin\Debug\Accounting.Business.dll" targetlocation="$TARGETDIR$" type="3" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <filedetails filename="C:\Users\F.Babaeian\source\repos\Accounting\Accounting.DataLayer\bin\Debug\Accounting.DataLayer.dll" targetlocation="$TARGETDIR$" type="3" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <filedetails filename="C:\Users\F.Babaeian\source\repos\Accounting\Accounting.Utility\bin\Debug\Accounting.Utility.dll" targetlocation="$TARGETDIR$" type="3" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <filedetails filename="C:\Users\F.Babaeian\source\repos\Accounting\Accounting.ViewModels\bin\Debug\Accounting.ViewModels.dll" targetlocation="$TARGETDIR$" type="3" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+  </files>
+  <dependencies>
+    <dependencydetails filename="C:\Users\F.Babaeian\source\repos\Accounting\Accounting.DataLayer\bin\Debug\Accounting.DataLayer.dll" targetlocation="$TARGETDIR$" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Users\F.Babaeian\source\repos\Accounting\Accounting.DataLayer\bin\Debug\EntityFramework.dll" targetlocation="$TARGETDIR$" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Users\F.Babaeian\source\repos\Accounting\Accounting.DataLayer\bin\Debug\EntityFramework.SqlServer.dll" targetlocation="$TARGETDIR$" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Program Files (x86)\Stimulsoft Reports.Ultimate 2014.3\Bin\Stimulsoft.Base.dll" targetlocation="GAC" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Users\F.Babaeian\source\repos\MyAccounting\Stimulsoft.Controls.Win.dll" targetlocation="GAC" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Program Files (x86)\Stimulsoft Reports.Ultimate 2014.3\Bin\Stimulsoft.Report.dll" targetlocation="GAC" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Users\F.Babaeian\source\repos\MyAccounting\Stimulsoft.Report.Win.dll" targetlocation="GAC" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Users\F.Babaeian\source\repos\Accounting\Accounting.Business\bin\Debug\Accounting.Business.dll" targetlocation="$TARGETDIR$" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Users\F.Babaeian\source\repos\Accounting\Accounting.Utility\bin\Debug\Accounting.Utility.dll" targetlocation="$TARGETDIR$" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+    <dependencydetails filename="C:\Users\F.Babaeian\source\repos\Accounting\Accounting.ViewModels\bin\Debug\Accounting.ViewModels.dll" targetlocation="$TARGETDIR$" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="0" runprogram="0" installfilecommand="0" />
+  </dependencies>
+  <registry />
+  <dialogtheme>
+    <themename>Official</themename>
+  </dialogtheme>
+  <authenticode>
+    <sign>0</sign>
+    <mode>0</mode>
+    <certificatefile />
+    <keyfile />
+    <pfxfile />
+    <productinfourl />
+    <authpassword />
+    <timestampurl />
+    <signall>0</signall>
+  </authenticode>
+  <compression>
+    <compressiontype>8</compressiontype>
+    <encrypt>0</encrypt>
+    <compressionpassword />
+  </compression>
+  <output>
+    <outputtype>0</outputtype>
+    <location />
+    <filename />
+    <calculatefilehash>0</calculatefilehash>
+    <refreshrevisioncode>1</refreshrevisioncode>
+  </output>
+</iasettings>
